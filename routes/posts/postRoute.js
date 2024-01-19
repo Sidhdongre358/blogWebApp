@@ -3,7 +3,7 @@ import postCtrl from "../../controllers/posts/postCtrl.js";
 import { isProtected } from "../../middlewares/isProtected.js";
 import storage from "../../config/cloudinary.js";
 import multer from "multer";
-import Post from "../../models/posts/post.js";
+import Post from "../../models/posts/Post.js";
 
 //instance of multer
 

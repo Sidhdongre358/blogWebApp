@@ -1,4 +1,4 @@
-import Post from "../../models/posts/post.js";
+import Post from "../../models/posts/Post.js";
 import User from "../../models/users/User.js";
 import {
   validateId,

@@ -10,7 +10,7 @@ import logger from "./middlewares/logger.js";
 import MongoStore from "connect-mongo";
 import { fileURLToPath } from "url";
 import { dirname } from "path";
-import Post from "./models/posts/post.js";
+import Post from "./models/posts/Post.js";
 import truncatePost from "./utils/helper.js";
 import methodOverride from "method-override";
 dotenv.config();

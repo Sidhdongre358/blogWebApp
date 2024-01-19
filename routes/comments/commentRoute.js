@@ -1,7 +1,7 @@
 import express from "express";
 import commentCtrl from "../../controllers/comments/commentCtrl.js";
 import { isProtected } from "../../middlewares/isProtected.js";
-import Post from "../../models/posts/post.js";
+import Post from "../../models/posts/Post.js";
 import Comment from "../../models/comments/Comment.js";
 
 const commentRoute = express.Router();

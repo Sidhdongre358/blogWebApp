@@ -1,5 +1,5 @@
 import mongoose from "mongoose";
-import Post from "../posts/post.js";
+import Post from "../posts/Post.js";
 
 // userSchema
 const userSchema = new mongoose.Schema(
