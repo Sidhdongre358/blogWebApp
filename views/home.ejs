@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Fontawesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <!-- Google font -->
+
+    <link rel="stylesheet" href="/css/style.css" />
+    <!-- <img src="images/sd.png" alt="logo" /> -->
+    <title>Blog-app</title>
+    <link rel="icon" href="images/sd.png" type="image/png" />
+  </head>
+  <body>
+    <!-- Preloader  -->
+
+    <div class="preloader"></div>
+    <!-- Navbar -->
+    <%-include("partials/navbar.ejs") %>
+    <!-- header -->
+    <header>
+      <div class="header-content">
+        <h1>let's talk about Ai</h1>
+        <p>
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Asperiores
+          reiciendis
+        </p>
+        <!-- <a href="#">
+          <span>Create New Post</span>
+        </a> -->
+      </div>
+    </header>
+    <!-- Latest post title -->
+
+    <div class="latest-post-title">
+      <!-- Icon -->
+      <div class="icon">
+        <i class="fas fa-book-open"></i>
+      </div>
+      <h1>Latest Posts (<%=posts?.length %>)</h1>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam,
+        voluptates.
+      </p>
+    </div>
+
+    <!-- content -->
+    <section class="container-flex">
+      <% if(posts){ %> <%posts?.forEach(post => {%>
+      <!-- Let's map data  -->
+
+      <article class="post-content">
+        <img src="<%=post?.image  %>" alt="" class="post-image" />
+        <p class="post-info">
+          <span class="post-author">
+            <i class="fas fa-user"></i>
+            <a href="#"><%=post?.user.fullName %></a>
+          </span>
+          <span class="post-date">
+            <i class="far fa-calendar-alt"></i>
+            <time datetime="<%=post?.createdAt.toLocaleDateString()  %>"
+              ><%=post?.createdAt.toLocaleDateString() %></time
+            >
+          </span>
+        </p>
+        <h1 class="post-title"><%=post?.title%></h1>
+        <p class="post-body"><%=truncatePost(post?.description) %></p>
+        <!-- category -->
+        <div class="post-category">
+          <span>Category: <%=post?.category %></span>
+        </div>
+        <a href="/api/v1/posts/<%=post._id%>" class="post-read-more"
+          >Continue Reading...</a
+        >
+      </article>
+      <% }); %> <% }else{ %>
+      <article class="post-content">
+        <h1>No posts yet...</h1>
+      </article>
+
+      <% } %>
+    </section>
+    <!-- footer -->
+    <%-include("partials/footer.ejs") %>
+
+    <script src="/js/loader.js"></script>
+  </body>
+</html>

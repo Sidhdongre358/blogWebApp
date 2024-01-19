@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Fontawesome -->
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <!-- CSS -->
+    <link rel="stylesheet" href="/css/form.css" />
+    <link rel="stylesheet" href="/css/style.css" />
+
+    <title>Update comment</title>
+    <link rel="icon" href="/images/sd.png" type="image/png" />
+  </head>
+  <body>
+     <!-- Preloader  -->
+
+     <div class="preloader"></div>
+    <%-include("../partials/navbar.ejs") %>
+
+    <div class="form-container">
+      <!-- icon -->
+      <h1>Update comment</h1>
+      <p>
+        <!-- lock icon -->
+        <i class="fas fa-lock"></i>
+      </p>
+
+      <!-- Invalid credentials  -->
+      <% if (error.length >2) {%>
+      <small class="error">
+        <i class="fas fa-exclamation-circle"></i>
+        <%=error %>
+      </small>
+      <% } %>
+      <form
+        action="/api/v1/comments/<%=post?._id%>/<%=comment?._id  %>?_method=PUT"
+        method="POST"
+      >
+        <label for="message">Message</label>
+        <input type="text" value="<%=comment?.message  %>" name="message" />
+        <button type="submit">Update</button>
+      </form>
+    </div>
+
+    <!-- Footer -->
+    <%-include("../partials/footer.ejs") %>
+    <script src="/js/loader.js"></script>
+  </body>
+</html>

@@ -1,0 +1,43 @@
+<!-- nav -->
+<link rel="stylesheet" href="/css/navbar.css" />
+
+<nav>
+  <div>
+    <img src="/images/sd.png" alt="logo" />
+  </div>
+
+  <ul>
+    <% if(userAuth){ %>
+    <li>
+      <a href="/">Home</a>
+    </li>
+    <!-- <li>
+      <a href="/api/v1/posts/">Posts</a>
+    </li> -->
+    <li>
+      <a href="/api/v1/users/profile-page">Profile</a>
+    </li>
+    <li>
+      <a href="/api/v1/posts/addPost-page" class="create-post-btn">New Post</a>
+    </li>
+    <li>
+      <a href="/api/v1/users/logout" class="create-post-btn">Logout</a>
+    </li>
+
+    <% }else{ %>
+    <li>
+      <a href="/">Home</a>
+    </li>
+    <!-- <li>
+      <a href="/api/v1/posts/">Posts</a>
+    </li> -->
+    <li>
+      <a href="/api/v1/users/login-page">Login</a>
+    </li>
+    <li>
+      <a href="/api/v1/users/register-page">Register</a>
+    </li>
+
+    <% } %>
+  </ul>
+</nav>

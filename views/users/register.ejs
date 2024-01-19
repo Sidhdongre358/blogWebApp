@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Fontawesome -->
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <!-- CSS -->
+    <link rel="stylesheet" href="/css/form.css" />
+    <title>Register</title>
+    <link rel="icon" href="/images/sd.png" type="image/png" />
+  </head>
+  <body>
+     <!-- Preloader  -->
+
+     <div class="preloader"></div>
+    <%-include("../partials/navbar.ejs") %>
+
+    <div class="form-container">
+      <!-- icon -->
+      <h1>
+        Register
+        <i class="fas fa-user-plus"></i>
+      </h1>
+      <% if (error.length >2) {%>
+      <small class="error">
+        <i class="fas fa-exclamation-circle"></i>
+        <%=error %>
+      </small>
+      <% } %>
+
+      <form action="/api/v1/users/register/" method="POST">
+        <!-- full name -->
+        <label for="fullName">Full Name</label>
+        <input type="text" name="fullname" id="s1" required />
+        <!-- email -->
+        <label for="email">Email</label>
+        <input type="email" name="email" id="email" required />
+
+        <label for="password">Password</label>
+        <input type="password" name="password" id="password" required />
+
+        <button type="submit">Register</button>
+
+        <p>
+          Already have an account? <a href="/api/v1/users/login-page">Login</a>
+        </p>
+      </form>
+    </div>
+    <%-include("../partials/footer.ejs") %>
+    <script src="/js/loader.js"></script>
+  </body>
+</html>

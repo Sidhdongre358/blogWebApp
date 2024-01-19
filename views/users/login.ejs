@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Fontawesome -->
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <!-- CSS -->
+    <link rel="stylesheet" href="/css/form.css" />
+    <link rel="stylesheet" href="/css/style.css" />
+
+    <title>Login</title>
+    <link rel="icon" href="/images/sd.png" type="image/png" />
+  </head>
+  <body>
+     <!-- Preloader  -->
+
+     <div class="preloader"></div>
+    <%-include("../partials/navbar.ejs") %>
+
+    <div class="form-container">
+      <!-- icon -->
+      <h1>Login Into Your Account</h1>
+      <p>
+        <!-- lock icon -->
+        <i class="fas fa-lock"></i>
+      </p>
+
+      <!-- Invalid credentials  -->
+      <% if (error.length >2) {%>
+      <small class="error">
+        <i class="fas fa-exclamation-circle"></i>
+        <%=error %>
+      </small>
+      <% } %>
+      <form action="/api/v1/users/login" method="POST">
+        <label for="email">Email</label>
+        <input type="email" name="email" id="email" />
+
+        <label for="password">Password</label>
+        <input type="password" name="password" id="password" />
+
+        <button type="submit">Login</button>
+
+        <p>
+          Don't have an account?
+          <a href="/api/v1/users/register-page">Register</a>
+        </p>
+      </form>
+    </div>
+
+    <!-- Footer -->
+    <%-include("../partials/footer.ejs") %>
+    <script src="/js/loader.js"></script>
+  </body>
+</html>

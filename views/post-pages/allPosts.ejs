@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/posts.css" />
+
+    <title>Posts</title>
+    <link rel="icon" href="/images/sd.png" type="image/png" />
+  </head>
+  <body>
+    <!-- Nav bar -->
+    <%-include("../partials/navbar.ejs") %>
+    <div class="post-conatiner">
+      <!-- content -->
+      <h1>All post</h1>
+
+      <!-- 
+        posts
+       -->
+      <article class="post-content">
+        <img src="/images/post3.jpg" alt="" class="post-image" />
+        <p class="post-info">
+          <span class="post-author">
+            <i class="fas fa-user"></i>
+            <a href="#">John Doe</a>
+          </span>
+          <span class="post-date">
+            <i class="far fa-calendar-alt"></i>
+            <time datetime="2020-01-01">January 1, 2020</time>
+          </span>
+        </p>
+        <h1 class="post-title">Become a Web Developer</h1>
+        <p class="post-body">
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Officia
+          itaque inventore culpa placeat! Cum nam optio, labore, voluptas sunt
+          quam rem cupiditate laboriosam amet reiciendis velit doloribus eum!
+          Repudiandae, odio?
+        </p>
+        <!-- category -->
+        <div class="post-category">
+          <span>Category:</span>
+        </div>
+        <a href="/" class="post-read-more">Continue Reading...</a>
+      </article>
+      <article class="post-content">
+        <img src="/images/post3.jpg" alt="" class="post-image" />
+        <p class="post-info">
+          <span class="post-author">
+            <i class="fas fa-user"></i>
+            <a href="#">John Doe</a>
+          </span>
+          <span class="post-date">
+            <i class="far fa-calendar-alt"></i>
+            <time datetime="2020-01-01">January 1, 2020</time>
+          </span>
+        </p>
+        <h1 class="post-title">Become a Web Developer</h1>
+        <p class="post-body">
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Officia
+          itaque inventore culpa placeat! Cum nam optio, labore, voluptas sunt
+          quam rem cupiditate laboriosam amet reiciendis velit doloribus eum!
+          Repudiandae, odio?
+        </p>
+        <!-- category -->
+        <div class="post-category">
+          <span>Category:</span>
+        </div>
+        <a href="/" class="post-read-more">Continue Reading...</a>
+      </article>
+    </div>
+
+    <!-- Footer -->
+    <%-include("../partials/footer.ejs") %>
+    <script src="/js/loader.js"></script>
+  </body>
+</html>
