@@ -31,7 +31,7 @@ BlogApp is a full-stack web application where users can register, log in, post p
 
 2. Navigate to the project directory
     ```sh
-    cd blogApp
+    cd blogWebApp
     ```
     [Copy](javascript:void(0);)
 
