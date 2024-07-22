@@ -1,4 +1,4 @@
-# BlogApp
+# BlogWebApp
 
 ## Description
 
