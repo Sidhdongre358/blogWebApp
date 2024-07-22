@@ -63,5 +63,4 @@ This app leverages modern technologies and follows best practices to ensure scal
    
 2. Open your browser and navigate to `http://localhost:3000`
 
-## Folder Structure
 
