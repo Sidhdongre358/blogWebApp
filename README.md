@@ -1,4 +1,4 @@
-# BlogApp
+# BlogWebApp
 
 ## Description
 
@@ -25,7 +25,7 @@ BlogApp is a full-stack web application where users can register, log in, post p
 
 1. Clone the repository
     ```sh
-    git clone https://github.com/yourusername/blogApp.git
+    git clone https://github.com/sidhdongre358/blogWebApp.git
     ```
     [Copy](javascript:void(0);)
 
@@ -46,7 +46,7 @@ BlogApp is a full-stack web application where users can register, log in, post p
 1. Create a `.env` file in the root directory and add the following environment variables:
     ```plaintext
     PORT=3000
-    MONGODB_URI=mongodb://localhost:27017/blogApp
+    MONGODB_URI=mongodb://localhost:27017/blogwebApp
     SESSION_SECRET=your_session_secret
     CLOUDINARY_CLOUD_NAME=your_cloud_name
     CLOUDINARY_API_KEY=your_api_key
